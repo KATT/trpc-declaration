@@ -5,7 +5,7 @@
 import { initTRPC } from "@trpc/server";
 import { z } from "zod";
 
-const t = initTRPC.create();
+const t = initTRPC.context<{ foo: "bar" }>().create();
 
 const appRouter = t.router({
   greeting: t.procedure
@@ -26,9 +26,9 @@ const appRouter = t.router({
       };
     }),
   // 💡 Tip: Try adding a new procedure here and see if you can use it in the client!
-  // getUser: t.procedure.query(() => {
-  //   return { id: '1', name: 'bob' };
-  // }),
+  getUser: t.procedure.query(() => {
+    return { id: "1", name: "bob" };
+  }),
 });
 
 // export only the type definition of the API
