@@ -1,6 +1,9 @@
 export declare const trpc: import("@trpc/react/dist/createTRPCReact").CreateTRPCReact<import("@trpc/server").CreateRouterInner<{
     ctx: {
-        foo: "bar";
+        user: {
+            id: number;
+            name: string;
+        } | null;
     };
     meta: {};
     errorShape: import("@trpc/server").DefaultErrorShape;
@@ -9,7 +12,10 @@ export declare const trpc: import("@trpc/react/dist/createTRPCReact").CreateTRPC
     greeting: import("@trpc/server").BuildProcedure<"query", {
         _config: {
             ctx: {
-                foo: "bar";
+                user: {
+                    id: number;
+                    name: string;
+                } | null;
             };
             meta: {};
             errorShape: import("@trpc/server").DefaultErrorShape;
@@ -17,10 +23,16 @@ export declare const trpc: import("@trpc/react/dist/createTRPCReact").CreateTRPC
         };
         _meta: {};
         _ctx_in: {
-            foo: "bar";
+            user: {
+                id: number;
+                name: string;
+            } | null;
         };
         _ctx_out: {
-            foo: "bar";
+            user: {
+                id: number;
+                name: string;
+            } | null;
         };
         _input_in: {
             name?: string | null | undefined;
@@ -33,29 +45,95 @@ export declare const trpc: import("@trpc/react/dist/createTRPCReact").CreateTRPC
     }, {
         text: string;
     }>;
-    getUser: import("@trpc/server").BuildProcedure<"query", {
-        _config: {
-            ctx: {
-                foo: "bar";
-            };
-            meta: {};
-            errorShape: import("@trpc/server").DefaultErrorShape;
-            transformer: import("@trpc/server").DefaultDataTransformer;
+    viewer: import("@trpc/server").CreateRouterInner<{
+        ctx: {
+            user: {
+                id: number;
+                name: string;
+            } | null;
         };
-        _ctx_in: {
-            foo: "bar";
-        };
-        _ctx_out: {
-            foo: "bar";
-        };
-        _input_in: typeof import("@trpc/server").unsetMarker;
-        _input_out: typeof import("@trpc/server").unsetMarker;
-        _output_in: typeof import("@trpc/server").unsetMarker;
-        _output_out: typeof import("@trpc/server").unsetMarker;
-        _meta: {};
+        meta: {};
+        errorShape: import("@trpc/server").DefaultErrorShape;
+        transformer: import("@trpc/server").DefaultDataTransformer;
     }, {
-        id: string;
-        name: string;
+        whoami: import("@trpc/server").BuildProcedure<"query", {
+            _config: {
+                ctx: {
+                    user: {
+                        id: number;
+                        name: string;
+                    } | null;
+                };
+                meta: {};
+                errorShape: import("@trpc/server").DefaultErrorShape;
+                transformer: import("@trpc/server").DefaultDataTransformer;
+            };
+            _ctx_in: {
+                user: {
+                    id: number;
+                    name: string;
+                } | null;
+            };
+            _ctx_out: {
+                user: {
+                    id: number;
+                    name: string;
+                } | null;
+            };
+            _input_in: typeof import("@trpc/server").unsetMarker;
+            _input_out: typeof import("@trpc/server").unsetMarker;
+            _output_in: typeof import("@trpc/server").unsetMarker;
+            _output_out: typeof import("@trpc/server").unsetMarker;
+            _meta: {};
+        }, {
+            id: number;
+            name: string;
+        } | null>;
+        edit: import("@trpc/server").BuildProcedure<"mutation", {
+            _config: {
+                ctx: {
+                    user: {
+                        id: number;
+                        name: string;
+                    } | null;
+                };
+                meta: {};
+                errorShape: import("@trpc/server").DefaultErrorShape;
+                transformer: import("@trpc/server").DefaultDataTransformer;
+            };
+            _meta: {};
+            _ctx_in: {
+                user: {
+                    id: number;
+                    name: string;
+                } | null;
+            };
+            _ctx_out: import("@trpc/server").Overwrite<{
+                user: {
+                    id: number;
+                    name: string;
+                } | null;
+            }, {
+                user: {
+                    id: number;
+                    name: string;
+                };
+            }>;
+            _input_in: {
+                name: string;
+            };
+            _input_out: {
+                name: string;
+            };
+            _output_in: typeof import("@trpc/server").unsetMarker;
+            _output_out: typeof import("@trpc/server").unsetMarker;
+        }, {
+            name: string;
+            user: {
+                id: number;
+                name: string;
+            };
+        }>;
     }>;
 }>, unknown>;
 //# sourceMappingURL=trpc.d.ts.map
