@@ -35,7 +35,7 @@ const appRouter = router({
       )
       .mutation(({ ctx, input }) => {
         return {
-          ...ctx,
+          ...ctx.user,
           ...input,
         };
       }),

@@ -129,10 +129,7 @@ export declare const trpc: import("@trpc/react/dist/createTRPCReact").CreateTRPC
             _output_out: typeof import("@trpc/server").unsetMarker;
         }, {
             name: string;
-            user: {
-                id: number;
-                name: string;
-            };
+            id: number;
         }>;
     }>;
 }>, unknown>;

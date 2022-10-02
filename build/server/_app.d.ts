@@ -129,10 +129,7 @@ declare const appRouter: import("@trpc/server").CreateRouterInner<{
             _output_out: typeof import("@trpc/server").unsetMarker;
         }, {
             name: string;
-            user: {
-                id: number;
-                name: string;
-            };
+            id: number;
         }>;
     }>;
 }>;
