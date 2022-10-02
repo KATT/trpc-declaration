@@ -2,13 +2,11 @@
  * This is the API-handler of your app that contains all your API routes.
  * On a bigger app, you will probably want to split this file up into multiple files.
  */
-import { initTRPC } from "@trpc/server";
 import { z } from "zod";
+import { publicProcedure, authedProcedure, router } from "./trpc";
 
-const t = initTRPC.context<{ foo: "bar" }>().create();
-
-const appRouter = t.router({
-  greeting: t.procedure
+const appRouter = router({
+  greeting: publicProcedure
     // This is the input schema of your procedure
     // 💡 Tip: Try changing this and see type errors on the client straight away
     .input(
@@ -25,9 +23,22 @@ const appRouter = t.router({
         // 💡 Tip: Try adding a new property here and see it propagate to the client straight-away
       };
     }),
-  // 💡 Tip: Try adding a new procedure here and see if you can use it in the client!
-  getUser: t.procedure.query(() => {
-    return { id: "1", name: "bob" };
+  viewer: router({
+    whoami: publicProcedure.query((opts) => {
+      return opts.ctx.user;
+    }),
+    edit: authedProcedure
+      .input(
+        z.object({
+          name: z.string(),
+        }),
+      )
+      .mutation(({ ctx, input }) => {
+        return {
+          ...ctx.user,
+          ...input,
+        };
+      }),
   }),
 });
 
