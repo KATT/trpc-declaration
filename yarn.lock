@@ -2,40 +2,48 @@
 # yarn lockfile v1
 
 
-"@tanstack/query-core@4.3.8":
-  version "4.3.8"
-  resolved "https://registry.npmjs.org/@tanstack/query-core/-/query-core-4.3.8.tgz#d5f07c1d9d4f83f16f0bed7f3b245fa0e557b037"
-  integrity sha512-AEUWtCNBIImFZ9tMt/P8V86kIhMHpfoJqAI1auGOLR8Wzeq7Ymiue789PJG0rKYcyViUicBZeHjggMqyEQVMfQ==
-
-"@tanstack/react-query@^4.3.0":
-  version "4.3.9"
-  resolved "https://registry.npmjs.org/@tanstack/react-query/-/react-query-4.3.9.tgz#13332a1d4dd404baec24c2853883bcb3cc61ea92"
-  integrity sha512-odfDW6WiSntCsCh+HFeJtUys3UnVOjfJMhykAtGtYvcklMyyDmCv9BVBt5KlSpbk/qW3kURPFCDapO+BFUlCwg==
+"@swc/helpers@^0.4.11":
+  version "0.4.11"
+  resolved "https://registry.npmjs.org/@swc/helpers/-/helpers-0.4.11.tgz#db23a376761b3d31c26502122f349a21b592c8de"
+  integrity sha512-rEUrBSGIoSFuYxwBYtlUFMlE2CwGhmW+w9355/5oduSw8e5h2+Tj4UrAGNNgP9915++wj5vkQo0UuOBqOAq4nw==
   dependencies:
-    "@tanstack/query-core" "4.3.8"
+    tslib "^2.4.0"
+
+"@tanstack/query-core@4.8.0":
+  version "4.8.0"
+  resolved "https://registry.npmjs.org/@tanstack/query-core/-/query-core-4.8.0.tgz#8a7d0a0495c92ab82a49de5c4393dc7b40080d66"
+  integrity sha512-PVcSqAWboFA86eNgtHTOjfHjBkNuFGAM6kPH82p1ibx1R76f7EjedZ+LZi4ZnW4ppoSl/+hUtCgWsiNQ2ViLTw==
+
+"@tanstack/react-query@^4.8.0":
+  version "4.8.0"
+  resolved "https://registry.npmjs.org/@tanstack/react-query/-/react-query-4.8.0.tgz#30dbbb9efeb28c66a40ef0bf68b89952dce66ed2"
+  integrity sha512-e3QzL/S8XeA5MYqOUUABet4oZDBc1MbeUIo32r0cxEDoDJS+9oqx0az9AbBxacZ7SjM/Fy4u/eXQFBjsKGFQ6A==
+  dependencies:
+    "@tanstack/query-core" "4.8.0"
     use-sync-external-store "^1.2.0"
 
-"@trpc/client@^10.0.0-proxy-beta.3":
-  version "10.0.0-proxy-beta.3"
-  resolved "https://registry.npmjs.org/@trpc/client/-/client-10.0.0-proxy-beta.3.tgz#3cff311723e10f1876962f8238e9a7c76b4538bd"
-  integrity sha512-fNb9yf6uZYYpTTl5I80W0baDbCK0ZdOij9E2fMLeSNkmarb4QsCCtFXhE3yyJM2j/ZTCaUmWIgBMhX1kccI9WA==
+"@trpc/client@^10.0.0-proxy-beta.13":
+  version "10.0.0-proxy-beta.13"
+  resolved "https://registry.npmjs.org/@trpc/client/-/client-10.0.0-proxy-beta.13.tgz#f951879834e3258c177472b4687e5718eb0146cc"
+  integrity sha512-GM0X7OPftU3AQ+ZncuVcUPjmOM7wh76bENgkEfY5phhvnY0FCPhpHVtBhVff75lnENRf2RdIU04G0G3wwKRLmQ==
 
-"@trpc/next@^10.0.0-proxy-beta.3":
-  version "10.0.0-proxy-beta.3"
-  resolved "https://registry.npmjs.org/@trpc/next/-/next-10.0.0-proxy-beta.3.tgz#0e97c0dbeee6b60f686e850f5156bcc104f509e3"
-  integrity sha512-/SKzYPU03o8aMrg6nUVjamRI4IECijztDwNoN+XNaqDdVablUbapO/iU2nQsFcEKDGG8CNpPkVmeL5JslVXZdg==
+"@trpc/next@^10.0.0-proxy-beta.13":
+  version "10.0.0-proxy-beta.13"
+  resolved "https://registry.npmjs.org/@trpc/next/-/next-10.0.0-proxy-beta.13.tgz#d8c0088de3998e5ab01cf1daf96fd1f870aa280a"
+  integrity sha512-Zf3neIVwUx0LxOr/NvFd8Y/7HLvqhcrbwK0ZG++n9iQGt3G/O66xnRq6bSp3ZEe4F+PvZ3RCUhK9oDpSLB96iA==
   dependencies:
+    "@swc/helpers" "^0.4.11"
     react-ssr-prepass "^1.5.0"
 
-"@trpc/react@^10.0.0-proxy-beta.3":
-  version "10.0.0-proxy-beta.3"
-  resolved "https://registry.npmjs.org/@trpc/react/-/react-10.0.0-proxy-beta.3.tgz#5646e3fd81405eea2c78d378edcb5bf763b022b1"
-  integrity sha512-a4PfN9U643ADLl0+8xpqPUJvwhFwuRlNoq03oE6NmMqbtKblra0JTQwswQrnRaU6wjHHET3dKLfApPSivH46bg==
+"@trpc/react@^10.0.0-proxy-beta.13":
+  version "10.0.0-proxy-beta.13"
+  resolved "https://registry.npmjs.org/@trpc/react/-/react-10.0.0-proxy-beta.13.tgz#96572b0f6162292430297689857bdc34feec3715"
+  integrity sha512-7W+hJoD50Tt23QuI5IlCGjRuDo5pF2vHC4qEcM/vG5+1r4nUFBVUDBtQ+p1b7KVlqgUbJFBR+7zmVEQIpO1umg==
 
-"@trpc/server@^10.0.0-proxy-beta.3":
-  version "10.0.0-proxy-beta.3"
-  resolved "https://registry.npmjs.org/@trpc/server/-/server-10.0.0-proxy-beta.3.tgz#5cb8227f5992380b388917b28ffce33bf87886b2"
-  integrity sha512-ikJ1a+PZy/0Zy4Ue+9jEhMRDlFYyZro5IjM2Cg8RZ/Dy86ojQX/5PnO24Rq3/7vTiSr7WEBNajzXZX3kcYyb+A==
+"@trpc/server@^10.0.0-proxy-beta.13":
+  version "10.0.0-proxy-beta.13"
+  resolved "https://registry.npmjs.org/@trpc/server/-/server-10.0.0-proxy-beta.13.tgz#a7ecd28b1b8c0c4f428af62fbd0290fb906665d2"
+  integrity sha512-m3VCl3Boiwb7mqnbx6tLdYMyemccr5AgYY3NORnuXHnJpGOykmh5Fe6nq6x6efinuSXsUEipSD63oJmV4v1guw==
 
 "@types/node@^18.7.11":
   version "18.7.18"
@@ -77,6 +85,11 @@ react-ssr-prepass@^1.5.0:
   version "1.5.0"
   resolved "https://registry.npmjs.org/react-ssr-prepass/-/react-ssr-prepass-1.5.0.tgz#bc4ca7fcb52365e6aea11cc254a3d1bdcbd030c5"
   integrity sha512-yFNHrlVEReVYKsLI5lF05tZoHveA5pGzjFbFJY/3pOqqjGOmMmqx83N4hIjN2n6E1AOa+eQEUxs3CgRnPmT0RQ==
+
+tslib@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
+  integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
 
 typescript@4.7.4:
   version "4.7.4"
