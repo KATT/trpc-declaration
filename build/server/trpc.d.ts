@@ -1,5 +1,5 @@
 export declare const isAuthed: import("@trpc/server").MiddlewareFunction<{
-    _config: {
+    _config: import("@trpc/server/dist/core/internals/config").RootConfig<{
         ctx: {
             user: {
                 id: number;
@@ -9,7 +9,7 @@ export declare const isAuthed: import("@trpc/server").MiddlewareFunction<{
         meta: {};
         errorShape: import("@trpc/server").DefaultErrorShape;
         transformer: import("@trpc/server").DefaultDataTransformer;
-    };
+    }>;
     _ctx_in: {
         user: {
             id: number;
@@ -48,7 +48,7 @@ export declare const isAuthed: import("@trpc/server").MiddlewareFunction<{
     _meta: {};
 }>;
 export declare const publicProcedure: import("@trpc/server").ProcedureBuilder<{
-    _config: {
+    _config: import("@trpc/server/dist/core/internals/config").RootConfig<{
         ctx: {
             user: {
                 id: number;
@@ -58,7 +58,7 @@ export declare const publicProcedure: import("@trpc/server").ProcedureBuilder<{
         meta: {};
         errorShape: import("@trpc/server").DefaultErrorShape;
         transformer: import("@trpc/server").DefaultDataTransformer;
-    };
+    }>;
     _ctx_in: {
         user: {
             id: number;
@@ -78,7 +78,7 @@ export declare const publicProcedure: import("@trpc/server").ProcedureBuilder<{
     _meta: {};
 }>;
 export declare const authedProcedure: import("@trpc/server").ProcedureBuilder<{
-    _config: {
+    _config: import("@trpc/server/dist/core/internals/config").RootConfig<{
         ctx: {
             user: {
                 id: number;
@@ -88,7 +88,7 @@ export declare const authedProcedure: import("@trpc/server").ProcedureBuilder<{
         meta: {};
         errorShape: import("@trpc/server").DefaultErrorShape;
         transformer: import("@trpc/server").DefaultDataTransformer;
-    };
+    }>;
     _meta: {};
     _ctx_in: {
         user: {
@@ -112,7 +112,7 @@ export declare const authedProcedure: import("@trpc/server").ProcedureBuilder<{
     _output_in: typeof import("@trpc/server").unsetMarker;
     _output_out: typeof import("@trpc/server").unsetMarker;
 }>;
-export declare const router: <TProcRouterRecord extends import("@trpc/server").ProcedureRouterRecord>(opts: TProcRouterRecord) => import("@trpc/server").CreateRouterInner<{
+export declare const router: <TProcRouterRecord extends import("@trpc/server").ProcedureRouterRecord>(procedures: TProcRouterRecord) => import("@trpc/server").CreateRouterInner<import("@trpc/server/dist/core/internals/config").RootConfig<{
     ctx: {
         user: {
             id: number;
@@ -122,5 +122,5 @@ export declare const router: <TProcRouterRecord extends import("@trpc/server").P
     meta: {};
     errorShape: import("@trpc/server").DefaultErrorShape;
     transformer: import("@trpc/server").DefaultDataTransformer;
-}, TProcRouterRecord>;
+}>, TProcRouterRecord>;
 //# sourceMappingURL=trpc.d.ts.map

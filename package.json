@@ -7,10 +7,10 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^4.8.0",
-    "@trpc/client": "^10.0.0-proxy-beta.13",
-    "@trpc/next": "^10.0.0-proxy-beta.13",
-    "@trpc/react": "^10.0.0-proxy-beta.13",
-    "@trpc/server": "^10.0.0-proxy-beta.13",
+    "@trpc/client": "10.0.0-alpha-refactor-root-config-2022-10-04-00-34-34.22+74be061b",
+    "@trpc/next": "10.0.0-alpha-refactor-root-config-2022-10-04-00-34-34.22+74be061b",
+    "@trpc/react": "10.0.0-alpha-refactor-root-config-2022-10-04-00-34-34.22+74be061b",
+    "@trpc/server": "10.0.0-alpha-refactor-root-config-2022-10-04-00-34-34.22+74be061b",
     "zod": "^3.19.1"
   },
   "devDependencies": {
