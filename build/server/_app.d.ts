@@ -1,4 +1,4 @@
-declare const appRouter: import("@trpc/server").CreateRouterInner<{
+declare const appRouter: import("@trpc/server").CreateRouterInner<import("@trpc/server/dist/core/internals/config").RootConfig<{
     ctx: {
         user: {
             id: number;
@@ -8,9 +8,9 @@ declare const appRouter: import("@trpc/server").CreateRouterInner<{
     meta: {};
     errorShape: import("@trpc/server").DefaultErrorShape;
     transformer: import("@trpc/server").DefaultDataTransformer;
-}, {
+}>, {
     greeting: import("@trpc/server").BuildProcedure<"query", {
-        _config: {
+        _config: import("@trpc/server/dist/core/internals/config").RootConfig<{
             ctx: {
                 user: {
                     id: number;
@@ -20,7 +20,7 @@ declare const appRouter: import("@trpc/server").CreateRouterInner<{
             meta: {};
             errorShape: import("@trpc/server").DefaultErrorShape;
             transformer: import("@trpc/server").DefaultDataTransformer;
-        };
+        }>;
         _meta: {};
         _ctx_in: {
             user: {
@@ -45,7 +45,7 @@ declare const appRouter: import("@trpc/server").CreateRouterInner<{
     }, {
         text: string;
     }>;
-    viewer: import("@trpc/server").CreateRouterInner<{
+    viewer: import("@trpc/server").CreateRouterInner<import("@trpc/server/dist/core/internals/config").RootConfig<{
         ctx: {
             user: {
                 id: number;
@@ -55,9 +55,9 @@ declare const appRouter: import("@trpc/server").CreateRouterInner<{
         meta: {};
         errorShape: import("@trpc/server").DefaultErrorShape;
         transformer: import("@trpc/server").DefaultDataTransformer;
-    }, {
+    }>, {
         whoami: import("@trpc/server").BuildProcedure<"query", {
-            _config: {
+            _config: import("@trpc/server/dist/core/internals/config").RootConfig<{
                 ctx: {
                     user: {
                         id: number;
@@ -67,7 +67,7 @@ declare const appRouter: import("@trpc/server").CreateRouterInner<{
                 meta: {};
                 errorShape: import("@trpc/server").DefaultErrorShape;
                 transformer: import("@trpc/server").DefaultDataTransformer;
-            };
+            }>;
             _ctx_in: {
                 user: {
                     id: number;
@@ -90,7 +90,7 @@ declare const appRouter: import("@trpc/server").CreateRouterInner<{
             name: string;
         } | null>;
         edit: import("@trpc/server").BuildProcedure<"mutation", {
-            _config: {
+            _config: import("@trpc/server/dist/core/internals/config").RootConfig<{
                 ctx: {
                     user: {
                         id: number;
@@ -100,7 +100,7 @@ declare const appRouter: import("@trpc/server").CreateRouterInner<{
                 meta: {};
                 errorShape: import("@trpc/server").DefaultErrorShape;
                 transformer: import("@trpc/server").DefaultDataTransformer;
-            };
+            }>;
             _meta: {};
             _ctx_in: {
                 user: {
