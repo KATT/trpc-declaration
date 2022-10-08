@@ -22,12 +22,6 @@ declare const appRouter: import("@trpc/server").CreateRouterInner<import("@trpc/
             transformer: import("@trpc/server").DefaultDataTransformer;
         }>;
         _meta: {};
-        _ctx_in: {
-            user: {
-                id: number;
-                name: string;
-            } | null;
-        };
         _ctx_out: {
             user: {
                 id: number;
@@ -68,12 +62,6 @@ declare const appRouter: import("@trpc/server").CreateRouterInner<import("@trpc/
                 errorShape: import("@trpc/server").DefaultErrorShape;
                 transformer: import("@trpc/server").DefaultDataTransformer;
             }>;
-            _ctx_in: {
-                user: {
-                    id: number;
-                    name: string;
-                } | null;
-            };
             _ctx_out: {
                 user: {
                     id: number;
@@ -102,12 +90,6 @@ declare const appRouter: import("@trpc/server").CreateRouterInner<import("@trpc/
                 transformer: import("@trpc/server").DefaultDataTransformer;
             }>;
             _meta: {};
-            _ctx_in: {
-                user: {
-                    id: number;
-                    name: string;
-                } | null;
-            };
             _ctx_out: import("@trpc/server").Overwrite<{
                 user: {
                     id: number;
