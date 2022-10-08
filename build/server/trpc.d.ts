@@ -10,12 +10,6 @@ export declare const isAuthed: import("@trpc/server").MiddlewareFunction<{
         errorShape: import("@trpc/server").DefaultErrorShape;
         transformer: import("@trpc/server").DefaultDataTransformer;
     }>;
-    _ctx_in: {
-        user: {
-            id: number;
-            name: string;
-        } | null;
-    };
     _ctx_out: {
         user: {
             id: number;
@@ -28,13 +22,17 @@ export declare const isAuthed: import("@trpc/server").MiddlewareFunction<{
     _output_out: unknown;
     _meta: {};
 }, {
-    _config: any;
-    _ctx_in: {
-        user: {
-            id: number;
-            name: string;
-        } | null;
-    };
+    _config: import("@trpc/server/dist/core/internals/config").RootConfig<{
+        ctx: {
+            user: {
+                id: number;
+                name: string;
+            } | null;
+        };
+        meta: {};
+        errorShape: import("@trpc/server").DefaultErrorShape;
+        transformer: import("@trpc/server").DefaultDataTransformer;
+    }>;
     _ctx_out: {
         user: {
             id: number;
@@ -59,12 +57,6 @@ export declare const publicProcedure: import("@trpc/server").ProcedureBuilder<{
         errorShape: import("@trpc/server").DefaultErrorShape;
         transformer: import("@trpc/server").DefaultDataTransformer;
     }>;
-    _ctx_in: {
-        user: {
-            id: number;
-            name: string;
-        } | null;
-    };
     _ctx_out: {
         user: {
             id: number;
@@ -90,12 +82,6 @@ export declare const authedProcedure: import("@trpc/server").ProcedureBuilder<{
         transformer: import("@trpc/server").DefaultDataTransformer;
     }>;
     _meta: {};
-    _ctx_in: {
-        user: {
-            id: number;
-            name: string;
-        } | null;
-    };
     _ctx_out: import("@trpc/server").Overwrite<{
         user: {
             id: number;

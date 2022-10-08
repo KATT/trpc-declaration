@@ -22,12 +22,6 @@ export declare const trpc: import("@trpc/react/dist/createTRPCReact").CreateTRPC
             transformer: import("@trpc/server").DefaultDataTransformer;
         }>;
         _meta: {};
-        _ctx_in: {
-            user: {
-                id: number;
-                name: string;
-            } | null;
-        };
         _ctx_out: {
             user: {
                 id: number;
@@ -68,12 +62,6 @@ export declare const trpc: import("@trpc/react/dist/createTRPCReact").CreateTRPC
                 errorShape: import("@trpc/server").DefaultErrorShape;
                 transformer: import("@trpc/server").DefaultDataTransformer;
             }>;
-            _ctx_in: {
-                user: {
-                    id: number;
-                    name: string;
-                } | null;
-            };
             _ctx_out: {
                 user: {
                     id: number;
@@ -102,12 +90,6 @@ export declare const trpc: import("@trpc/react/dist/createTRPCReact").CreateTRPC
                 transformer: import("@trpc/server").DefaultDataTransformer;
             }>;
             _meta: {};
-            _ctx_in: {
-                user: {
-                    id: number;
-                    name: string;
-                } | null;
-            };
             _ctx_out: import("@trpc/server").Overwrite<{
                 user: {
                     id: number;
