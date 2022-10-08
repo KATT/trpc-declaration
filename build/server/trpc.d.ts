@@ -22,7 +22,17 @@ export declare const isAuthed: import("@trpc/server").MiddlewareFunction<{
     _output_out: unknown;
     _meta: {};
 }, {
-    _config: import("@trpc/server/dist/core/internals/config").AnyRootConfig;
+    _config: import("@trpc/server/dist/core/internals/config").RootConfig<{
+        ctx: {
+            user: {
+                id: number;
+                name: string;
+            } | null;
+        };
+        meta: {};
+        errorShape: import("@trpc/server").DefaultErrorShape;
+        transformer: import("@trpc/server").DefaultDataTransformer;
+    }>;
     _ctx_out: {
         user: {
             id: number;
